@@ -4,26 +4,53 @@ import random
 # Prompt the user with the header/intro
 print("Guess the number!")
 
-# get users input
+# Main game loop
+play_again = "y"
+while play_again.lower() == "y":
+    #get the user's input for limit
+    Limit = (input("\nEnter the limit: ")
+    while not Limit.isdigit(): 
+        Limit = (input("Value not reconized. Please enter a numeric value: "))
+      
 
-Limit = (input("\nEnter the limit: "))
-while not Limit.isdigit(): 
-    Limit = (input("Value not reconized. Please enter a numeric value: "))
-# create a loop to fact check that its a number
+    Limit = (input("\nEnter the limit: "))
+    while not Limit.isdigit(): 
+        Limit = (input("Value not reconized. Please enter a numeric value: "))
 
-Limit = (int(Limit))
-Lower_bound = 1
-num = random.randint(Lower_bound, Limit)
+    # Will give error if you dont make limit, int after input
+    Limit = int(Limit)
+    Lower_bound = 1
+    num = random.randint(Lower_bound, Limit)
 
-print("\fnum")
-# if num
-# Too low.
-# Too high.
-# if the guess is correct, display message and exit loop
+    print(f"\nI'm thinking of a number between {Lower_bound} and {Limit}!")
+    
+    guess = none
+    tries = 0
 
-# You gussed it in {} tries.
+    while guess != num:
+        user_input = input("Enter your guess: ")
+        
+        if not uder_input.isdigit():
+            print("Please enter a valid number.")
+            continue
+        
+        guess = int(user_input)
+        tries += 1
+        
+        if guess < num:
+            print("Too low.")
+        elif guess > num:
+            print("Too High.")
+        else:
+        print(f"
+        print(f"You got it in {tries} guesses!\n")      
 
-# Would you like to play again? (y/n): y
-# Write a condition to fact check that it is y or n
 
+# Ask to play again
+    play_again = input("Would you like to play again? (y/n): ").lower()
+    while play_again not in ("y", "n"):
+        play_again = input("Invalid input. Please enter 'y' or 'n': ").lower()
+
+
+print("Thanks for playing! Goodbye!")
 # Bye! <3
