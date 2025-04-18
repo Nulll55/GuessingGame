@@ -8,12 +8,7 @@ print("Guess the number!")
 play_again = "y"
 while play_again.lower() == "y":
     #get the user's input for limit
-    Limit = (input("\nEnter the limit: ")
-    while not Limit.isdigit(): 
-        Limit = (input("Value not reconized. Please enter a numeric value: "))
-      
-
-    Limit = (input("\nEnter the limit: "))
+    Limit = input("\nEnter the limit: ")
     while not Limit.isdigit(): 
         Limit = (input("Value not reconized. Please enter a numeric value: "))
 
@@ -24,13 +19,13 @@ while play_again.lower() == "y":
 
     print(f"\nI'm thinking of a number between {Lower_bound} and {Limit}!")
     
-    guess = none
+    guess = None
     tries = 0
 
     while guess != num:
         user_input = input("Enter your guess: ")
         
-        if not uder_input.isdigit():
+        if not user_input.isdigit():
             print("Please enter a valid number.")
             continue
         
@@ -42,8 +37,7 @@ while play_again.lower() == "y":
         elif guess > num:
             print("Too High.")
         else:
-        print(f"
-        print(f"You got it in {tries} guesses!\n")      
+            print(f"You got it in {tries} guesses!\n")      
 
 
 # Ask to play again
